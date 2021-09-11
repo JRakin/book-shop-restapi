@@ -34,7 +34,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-console.log(require("crypto").randomBytes(64).toString("hex"));
+// console.log(require("crypto").randomBytes(64).toString("hex"));
 
 app.get("/", (req, res) => {
   res.send("hello");
