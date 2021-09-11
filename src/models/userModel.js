@@ -1,7 +1,14 @@
 const mongoose = require("mongoose");
 const Joi = require("joi");
+const uuidv4 = require('uuid').v4;
 
 const userSchema = mongoose.Schema({
+  uid: {
+    type: String,
+    default: function () {
+      return uuidv4();  
+    },
+  },
   firstName: {
     type: String,
     required: [true, "Please provide first name."],

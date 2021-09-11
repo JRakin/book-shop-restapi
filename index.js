@@ -70,6 +70,7 @@ app.post(
         token,
         data: {
           user: {
+            uid: user.uid,
             firstName: user.firstName,
             lastName: user.lastName,
             email: user.email,
