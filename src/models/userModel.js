@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const Joi = require("joi");
-const uuidv4 = require('uuid').v4;
+const uuidv4 = require("uuid").v4;
 
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
   uid: {
     type: String,
     default: function () {
-      return uuidv4();  
+      return uuidv4();
     },
   },
   firstName: {

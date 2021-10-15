@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const uuidv4 = require("uuid").v4;
 
-const categorySchema = mongoose.Schema({
+const categorySchema = new mongoose.Schema({
   name: {
     type: String,
     min: 1,
